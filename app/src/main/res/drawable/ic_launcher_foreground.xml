@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Línea de tendencia alcista -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000"
+        android:pathData="M22,72 L38,56 L52,63 L70,38 L86,28" />
+
+    <!-- Punto final de la línea (arriba a la derecha) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M86,28 m-5,0 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0" />
+
+    <!-- Flecha hacia arriba en el punto final -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M80,34 L86,28 L92,34" />
+
+    <!-- Eje horizontal inferior -->
+    <path
+        android:strokeColor="#CCFFFFFF"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M20,80 L88,80" />
+
+    <!-- Eje vertical izquierdo -->
+    <path
+        android:strokeColor="#CCFFFFFF"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M20,24 L20,80" />
+
+</vector>
