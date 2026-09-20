@@ -1,8 +1,14 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
     <style name="Base.Theme.FinTrack" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/purple_primary</item>
+        <item name="colorOnPrimary">@color/purple_on_primary</item>
+        <item name="colorPrimaryContainer">@color/purple_container</item>
+        <item name="colorOnPrimaryContainer">@color/purple_on_container</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        <item name="colorOnSurfaceVariant">@color/on_surface_variant</item>
+        <item name="colorOutlineVariant">@color/outline_variant</item>
+        <item name="android:windowBackground">@color/surface</item>
     </style>
 
     <style name="Theme.FinTrack" parent="Base.Theme.FinTrack" />
@@ -13,7 +19,7 @@
     </style>
 
     <style name="Theme.FinTrack.SplashScreen" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">#6650A4</item>
+        <item name="windowSplashScreenBackground">@color/purple_primary</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
         <item name="postSplashScreenTheme">@style/Theme.FinTrack</item>
     </style>

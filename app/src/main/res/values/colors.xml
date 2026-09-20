@@ -2,4 +2,26 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Paleta primaria morada -->
+    <color name="purple_primary">#6650A4</color>
+    <color name="purple_on_primary">#FFFFFF</color>
+    <color name="purple_container">#EADDFF</color>
+    <color name="purple_on_container">#21005D</color>
+
+    <!-- Superficie y fondo -->
+    <color name="surface">#FAFAFA</color>
+    <color name="surface_variant">#E7E0EC</color>
+    <color name="on_surface">#1C1B1F</color>
+    <color name="on_surface_variant">#49454F</color>
+    <color name="outline_variant">#CAC4D0</color>
+
+    <!-- Ingresos / gastos -->
+    <color name="income_green">#2E7D32</color>
+    <color name="expense_red">#C62828</color>
+
+    <!-- Progreso de gasto -->
+    <color name="progress_ok">#6650A4</color>
+    <color name="progress_warn">#E65100</color>
+    <color name="progress_danger">#C62828</color>
 </resources>
