@@ -1,7 +1,7 @@
 package com.paula.fintrack.ui.transactions
 
-import android.graphics.Color
 import android.view.LayoutInflater
+import com.paula.fintrack.R
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -38,10 +38,10 @@ class TransactionAdapter(
 
             if (transaction.type == "INGRESO") {
                 binding.tvAmount.text = "+%.2f €".format(transaction.amount)
-                binding.tvAmount.setTextColor(Color.parseColor("#4CAF50"))
+                binding.tvAmount.setTextColor(binding.root.context.getColor(R.color.income_green))
             } else {
                 binding.tvAmount.text = "-%.2f €".format(transaction.amount)
-                binding.tvAmount.setTextColor(Color.parseColor("#F44336"))
+                binding.tvAmount.setTextColor(binding.root.context.getColor(R.color.expense_red))
             }
 
             binding.root.setOnLongClickListener {
