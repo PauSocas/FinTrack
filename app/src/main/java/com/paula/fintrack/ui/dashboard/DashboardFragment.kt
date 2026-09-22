@@ -58,9 +58,9 @@ class DashboardFragment : Fragment() {
             binding.tvSpendingRate.text = "${data.spendingRate}%"
 
             val barColor = when {
-                data.spendingRate <= 70 -> Color.parseColor("#4CAF50")
-                data.spendingRate <= 90 -> Color.parseColor("#FF9800")
-                else -> Color.parseColor("#F44336")
+                data.spendingRate <= 70 -> requireContext().getColor(R.color.progress_ok)
+                data.spendingRate <= 90 -> requireContext().getColor(R.color.progress_warn)
+                else -> requireContext().getColor(R.color.progress_danger)
             }
             binding.progressSpending.setIndicatorColor(barColor)
 
@@ -132,7 +132,7 @@ class DashboardFragment : Fragment() {
                         leftMargin = dpToPx(20)
                         rightMargin = dpToPx(20)
                     }
-                    setBackgroundColor(Color.parseColor("#E0E0E0"))
+                    setBackgroundColor(requireContext().getColor(R.color.outline_variant))
                 }
                 container.addView(divider)
             }
@@ -180,7 +180,8 @@ class DashboardFragment : Fragment() {
         binding.tvRecent1Amount.text =
             if (tx1.type == "INGRESO") "+%.2f €".format(tx1.amount) else "-%.2f €".format(tx1.amount)
         binding.tvRecent1Amount.setTextColor(
-            if (tx1.type == "INGRESO") Color.parseColor("#4CAF50") else Color.parseColor("#F44336")
+            if (tx1.type == "INGRESO") requireContext().getColor(R.color.income_green)
+            else requireContext().getColor(R.color.expense_red)
         )
 
         if (transactions.size >= 2) {
@@ -193,7 +194,8 @@ class DashboardFragment : Fragment() {
             binding.tvRecent2Amount.text =
                 if (tx2.type == "INGRESO") "+%.2f €".format(tx2.amount) else "-%.2f €".format(tx2.amount)
             binding.tvRecent2Amount.setTextColor(
-                if (tx2.type == "INGRESO") Color.parseColor("#4CAF50") else Color.parseColor("#F44336")
+                if (tx2.type == "INGRESO") requireContext().getColor(R.color.income_green)
+                else requireContext().getColor(R.color.expense_red)
             )
         } else {
             binding.divider2.visibility = View.GONE
@@ -210,7 +212,8 @@ class DashboardFragment : Fragment() {
             binding.tvRecent3Amount.text =
                 if (tx3.type == "INGRESO") "+%.2f €".format(tx3.amount) else "-%.2f €".format(tx3.amount)
             binding.tvRecent3Amount.setTextColor(
-                if (tx3.type == "INGRESO") Color.parseColor("#4CAF50") else Color.parseColor("#F44336")
+                if (tx3.type == "INGRESO") requireContext().getColor(R.color.income_green)
+                else requireContext().getColor(R.color.expense_red)
             )
         } else {
             binding.divider3.visibility = View.GONE
@@ -234,13 +237,13 @@ class DashboardFragment : Fragment() {
         }
 
         val colors = listOf(
-            Color.parseColor("#EF5350"),
+            Color.parseColor("#6650A4"),
+            Color.parseColor("#9C7FE8"),
             Color.parseColor("#42A5F5"),
-            Color.parseColor("#66BB6A"),
-            Color.parseColor("#FFA726"),
-            Color.parseColor("#AB47BC"),
             Color.parseColor("#26C6DA"),
-            Color.parseColor("#EC407A")
+            Color.parseColor("#EC407A"),
+            Color.parseColor("#FFA726"),
+            Color.parseColor("#66BB6A")
         )
 
         val euroFormatter = object : ValueFormatter() {
