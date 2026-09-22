@@ -12,27 +12,27 @@
         android:padding="16dp">
 
         <!-- Tarjeta de balance -->
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             app:cardCornerRadius="16dp"
-            app:cardElevation="4dp"
-            app:cardBackgroundColor="?attr/colorPrimary">
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/purple_primary"
+            app:strokeWidth="0dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="24dp"
-                android:gravity="center">
+                android:padding="20dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
-                    android:layout_marginBottom="8dp">
+                    android:layout_marginBottom="6dp">
 
                     <TextView
                         android:layout_width="0dp"
@@ -40,16 +40,16 @@
                         android:layout_weight="1"
                         android:text="Balance del mes"
                         android:textColor="#FFFFFFFF"
-                        android:textSize="14sp"
-                        android:alpha="0.8" />
+                        android:textSize="13sp"
+                        android:alpha="0.75" />
 
                     <TextView
                         android:id="@+id/tvMonthName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#FFFFFFFF"
-                        android:textSize="13sp"
-                        android:alpha="0.7" />
+                        android:textSize="12sp"
+                        android:alpha="0.65" />
 
                 </LinearLayout>
 
@@ -59,99 +59,108 @@
                     android:layout_height="wrap_content"
                     android:text="0.00 €"
                     android:textColor="#FFFFFFFF"
-                    android:textSize="36sp"
-                    android:textStyle="bold" />
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="-0.02" />
 
             </LinearLayout>
 
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
-        <!-- Fila de ingresos y gastos -->
+        <!-- Pastillas de ingresos y gastos -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginBottom="12dp">
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginEnd="6dp"
                 app:cardCornerRadius="12dp"
-                app:cardElevation="2dp">
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/purple_container"
+                app:strokeWidth="0dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center">
+                    android:padding="14dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="💰 Ingresos"
-                        android:textSize="13sp" />
+                        android:text="Ingresos"
+                        android:textSize="12sp"
+                        android:textColor="@color/purple_on_container"
+                        android:alpha="0.7" />
 
                     <TextView
                         android:id="@+id/tvIngresos"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="+0.00 €"
-                        android:textColor="#4CAF50"
-                        android:textSize="18sp"
+                        android:textColor="@color/income_green"
+                        android:textSize="17sp"
                         android:textStyle="bold"
-                        android:layout_marginTop="4dp" />
+                        android:layout_marginTop="3dp" />
 
                 </LinearLayout>
 
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginStart="6dp"
                 app:cardCornerRadius="12dp"
-                app:cardElevation="2dp">
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/purple_container"
+                app:strokeWidth="0dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center">
+                    android:padding="14dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="💸 Gastos"
-                        android:textSize="13sp" />
+                        android:text="Gastos"
+                        android:textSize="12sp"
+                        android:textColor="@color/purple_on_container"
+                        android:alpha="0.7" />
 
                     <TextView
                         android:id="@+id/tvGastos"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="-0.00 €"
-                        android:textColor="#F44336"
-                        android:textSize="18sp"
+                        android:textColor="@color/expense_red"
+                        android:textSize="17sp"
                         android:textStyle="bold"
-                        android:layout_marginTop="4dp" />
+                        android:layout_marginTop="3dp" />
 
                 </LinearLayout>
 
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
 
         <!-- Gasto del mes con barra de progreso -->
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             app:cardCornerRadius="16dp"
-            app:cardElevation="2dp">
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/outline_variant">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -164,14 +173,14 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
-                    android:layout_marginBottom="12dp">
+                    android:layout_marginBottom="10dp">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="📊 Gasto del mes"
-                        android:textSize="16sp"
+                        android:text="Gasto del mes"
+                        android:textSize="14sp"
                         android:textStyle="bold"
                         android:textColor="?attr/colorOnSurface" />
 
@@ -180,9 +189,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0%"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         android:textStyle="bold"
-                        android:textColor="?attr/colorOnSurface" />
+                        android:textColor="?attr/colorPrimary" />
 
                 </LinearLayout>
 
@@ -194,7 +203,7 @@
                     android:max="100"
                     android:progress="0"
                     app:trackCornerRadius="4dp"
-                    app:trackThickness="10dp" />
+                    app:trackThickness="8dp" />
 
                 <TextView
                     android:id="@+id/tvSpendingDesc"
@@ -207,15 +216,17 @@
 
             </LinearLayout>
 
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
         <!-- Gráfico de tarta -->
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             app:cardCornerRadius="16dp"
-            app:cardElevation="2dp">
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/outline_variant">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -227,8 +238,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Gastos por categoría"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     android:textStyle="bold"
+                    android:textColor="?attr/colorOnSurface"
                     android:layout_marginBottom="8dp" />
 
                 <com.github.mikephil.charting.charts.PieChart
@@ -247,28 +259,33 @@
 
             </LinearLayout>
 
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
         <!-- Últimas transacciones -->
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="16dp"
-            app:cardElevation="2dp">
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/outline_variant">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Últimas transacciones"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     android:textStyle="bold"
-                    android:layout_marginBottom="12dp" />
+                    android:textColor="?attr/colorOnSurface"
+                    android:paddingHorizontal="16dp"
+                    android:layout_marginBottom="8dp" />
 
                 <!-- Fila 1 -->
                 <LinearLayout
@@ -276,6 +293,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="10dp"
                     android:gravity="center_vertical"
                     android:visibility="gone">
 
@@ -323,10 +342,9 @@
                 <View
                     android:id="@+id/divider2"
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="?attr/colorOutlineVariant"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="62dp"
+                    android:background="@color/outline_variant"
                     android:visibility="gone" />
 
                 <!-- Fila 2 -->
@@ -335,6 +353,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="10dp"
                     android:gravity="center_vertical"
                     android:visibility="gone">
 
@@ -382,10 +402,9 @@
                 <View
                     android:id="@+id/divider3"
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="?attr/colorOutlineVariant"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="62dp"
+                    android:background="@color/outline_variant"
                     android:visibility="gone" />
 
                 <!-- Fila 3 -->
@@ -394,6 +413,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="10dp"
                     android:gravity="center_vertical"
                     android:visibility="gone">
 
@@ -443,13 +464,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:paddingVertical="16dp"
                     android:text="Sin transacciones este mes"
                     android:textColor="?attr/colorOnSurfaceVariant"
                     android:visibility="gone" />
 
             </LinearLayout>
 
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
 
