@@ -16,6 +16,7 @@
             android:text="Cuestionario de perfil inversor"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
             android:layout_marginBottom="4dp" />
 
         <TextView
@@ -27,12 +28,14 @@
             android:layout_marginBottom="20dp" />
 
         <!-- Pregunta 1 -->
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             app:cardCornerRadius="12dp"
-            app:cardElevation="2dp">
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/outline_variant">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -46,6 +49,7 @@
                     android:text="1. ¿Cuánto tiempo planeas mantener tu inversión?"
                     android:textStyle="bold"
                     android:textSize="15sp"
+                    android:textColor="?attr/colorOnSurface"
                     android:layout_marginBottom="8dp" />
 
                 <RadioGroup android:id="@+id/rg1"
@@ -57,15 +61,17 @@
                 </RadioGroup>
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
         <!-- Pregunta 2 -->
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             app:cardCornerRadius="12dp"
-            app:cardElevation="2dp">
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/outline_variant">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -79,6 +85,7 @@
                     android:text="2. Si tu inversión pierde un 20%, ¿qué harías?"
                     android:textStyle="bold"
                     android:textSize="15sp"
+                    android:textColor="?attr/colorOnSurface"
                     android:layout_marginBottom="8dp" />
 
                 <RadioGroup android:id="@+id/rg2"
@@ -90,15 +97,17 @@
                 </RadioGroup>
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
         <!-- Pregunta 3 -->
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             app:cardCornerRadius="12dp"
-            app:cardElevation="2dp">
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/outline_variant">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -112,6 +121,7 @@
                     android:text="3. ¿Cuál es tu objetivo principal?"
                     android:textStyle="bold"
                     android:textSize="15sp"
+                    android:textColor="?attr/colorOnSurface"
                     android:layout_marginBottom="8dp" />
 
                 <RadioGroup android:id="@+id/rg3"
@@ -123,15 +133,17 @@
                 </RadioGroup>
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
         <!-- Pregunta 4 -->
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             app:cardCornerRadius="12dp"
-            app:cardElevation="2dp">
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/outline_variant">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -145,6 +157,7 @@
                     android:text="4. ¿Qué porcentaje de tus ahorros invertirías?"
                     android:textStyle="bold"
                     android:textSize="15sp"
+                    android:textColor="?attr/colorOnSurface"
                     android:layout_marginBottom="8dp" />
 
                 <RadioGroup android:id="@+id/rg4"
@@ -156,15 +169,17 @@
                 </RadioGroup>
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
         <!-- Pregunta 5 -->
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             app:cardCornerRadius="12dp"
-            app:cardElevation="2dp">
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/outline_variant">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -178,6 +193,7 @@
                     android:text="5. ¿Tienes experiencia previa en inversiones?"
                     android:textStyle="bold"
                     android:textSize="15sp"
+                    android:textColor="?attr/colorOnSurface"
                     android:layout_marginBottom="8dp" />
 
                 <RadioGroup android:id="@+id/rg5"
@@ -189,7 +205,7 @@
                 </RadioGroup>
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
         <!-- Botón calcular -->
         <com.google.android.material.button.MaterialButton
@@ -199,15 +215,17 @@
             android:text="Ver mi perfil"
             android:layout_marginBottom="16dp" />
 
-        <!-- Resultado (oculto al principio) -->
-        <androidx.cardview.widget.CardView
+        <!-- Resultado -->
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardResult"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
             android:visibility="gone"
             app:cardCornerRadius="16dp"
-            app:cardElevation="4dp">
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/purple_primary"
+            app:strokeWidth="0dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -229,6 +247,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="22sp"
                     android:textStyle="bold"
+                    android:textColor="#FFFFFF"
                     android:layout_marginBottom="12dp" />
 
                 <TextView
@@ -236,11 +255,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="14sp"
+                    android:textColor="#CCFFFFFF"
                     android:textAlignment="center"
                     android:lineSpacingExtra="4dp" />
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
 </ScrollView>
