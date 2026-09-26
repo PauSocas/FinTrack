@@ -39,6 +39,6 @@
         android:layout_height="wrap_content"
         android:textSize="15sp"
         android:textStyle="bold"
-        android:textColor="#F44336" />
+        android:textColor="@color/expense_red" />
 
 </LinearLayout>
