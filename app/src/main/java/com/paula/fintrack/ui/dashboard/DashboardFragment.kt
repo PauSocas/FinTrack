@@ -45,6 +45,9 @@ class DashboardFragment : Fragment() {
 
         setupPieChart()
 
+        binding.btnPrevMonth.setOnClickListener { viewModel.previousMonth() }
+        binding.btnNextMonth.setOnClickListener { viewModel.nextMonth() }
+
         viewModel.dashboardData.observe(viewLifecycleOwner) { data ->
             latestData = data
 
@@ -53,6 +56,8 @@ class DashboardFragment : Fragment() {
             binding.tvMonthName.text = data.monthName
             binding.tvIngresos.text = "+%.2f €".format(data.totalIngresos)
             binding.tvGastos.text = "-%.2f €".format(data.totalGastos)
+
+            binding.btnNextMonth.alpha = if (data.isCurrentMonth) 0.3f else 0.8f
 
             binding.progressSpending.setProgressCompat(data.spendingRate, true)
             binding.tvSpendingRate.text = "${data.spendingRate}%"
